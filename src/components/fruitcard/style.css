@@ -3,7 +3,20 @@
   height: 50px;
   background-color: lightgray;
   border-radius: 10px;
+  margin: 20px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.innercard {
+  width: 100%;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
+}
+
+.opencard {
+  height: 100px;
 }

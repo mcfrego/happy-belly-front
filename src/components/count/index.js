@@ -26,7 +26,7 @@ export function Count() {
 
   return (
     <div className={`${status} count`}>
-      <p>{countStates[status].text}</p>
+      <p>{countStates[status].text + parseInt(data)}</p>
     </div>
   );
 }

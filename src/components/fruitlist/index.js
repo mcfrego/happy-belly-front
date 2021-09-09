@@ -2,7 +2,8 @@ import "./style.css";
 import useFruits from "../../hooks/use-fruits";
 import { Fruitcard } from "..";
 
-export function Fruitlist() {
+export function Fruitlist(props) {
+  const { logged } = props;
   const { data, isLoading } = useFruits();
 
   if (isLoading)
@@ -21,8 +22,8 @@ export function Fruitlist() {
 
   return (
     <div className="list">
-      {data.map(({ name, size }, index) => (
-        <Fruitcard key={index} name={name} size={size} />
+      {data.map(({ name, size, id }) => (
+        <Fruitcard key={id} id={id} name={name} size={size} logged={logged} />
       ))}
     </div>
   );

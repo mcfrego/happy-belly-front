@@ -10,7 +10,7 @@ export function Home() {
       <Navbar logged={data} />
       <div className="body">
         <p>This is home</p>
-        <Fruitlist />
+        <Fruitlist logged={data} />
       </div>
     </div>
   );

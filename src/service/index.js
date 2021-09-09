@@ -41,8 +41,14 @@ export async function createFruits({ name, size, count }) {
   return data;
 }
 
-export async function updateFruit({ id, body }) {
+export async function updateFruit({ id, body, status }) {
   const token = localStorage.getItem("token");
+
+  if (status === "eat")
+    body = {
+      eatenStatus: true,
+      eatenDate: new Date(),
+    };
 
   const { data } = await api.put(`/fruit/me/${id}`, body, {
     headers: { token },
