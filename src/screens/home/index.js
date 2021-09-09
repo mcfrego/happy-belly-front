@@ -11,7 +11,7 @@ export function Home() {
     <div className="container">
       <Navbar logged={data} />
       <div className="body">
-        {fabState ? <FruitAdd /> : <p>This is your fridge!</p>}
+        {fabState ? <FruitAdd /> : <p>This is what's inside your fridge!</p>}
         <Fruitlist logged={data} isEdit={fabState} />
         {data && <Fab status={fabState} setStatus={setFabState} />}
       </div>

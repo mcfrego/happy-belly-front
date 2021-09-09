@@ -2,18 +2,9 @@ import "./style.css";
 import useFruitCount from "../../hooks/use-fruit-count";
 
 const countStates = {
-  sad: {
-    icon: "",
-    text: "Your belly is sad!",
-  },
-  soso: {
-    icon: "",
-    text: "Your belly is so so ...",
-  },
-  happy: {
-    icon: "",
-    text: "Your belly is happy!",
-  },
+  sad: "Your belly is sad!",
+  soso: "Your belly is so so!",
+  happy: "Your belly is happy!",
 };
 
 export function Count() {
@@ -26,7 +17,8 @@ export function Count() {
 
   return (
     <div className={`${status} count`}>
-      <p>{countStates[status].text + parseInt(data)}</p>
+      <p>{parseInt(data) + " fruits eaten today."}</p>
+      <p>{countStates[status]}</p>
     </div>
   );
 }

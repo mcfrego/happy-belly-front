@@ -24,7 +24,7 @@ export function FruitAdd() {
   return (
     <div className="add-fruit-container">
       <p className="add-fruit-title">Add on more fruit to your fridge</p>
-      <div class="add-fruit-inputs">
+      <div className="add-fruit-inputs">
         <label>
           <p>Name</p>
           <input placeholder="eg. strawberry" onChange={onNameChange} />
@@ -42,9 +42,7 @@ export function FruitAdd() {
           <input type="number" onChange={onQtyChange} />
         </label>
       </div>
-      <button class="add-fruit-button" onClick={onButtonClicked}>
-        Add it!
-      </button>
+      <button onClick={onButtonClicked}>Add it!</button>
     </div>
   );
 }

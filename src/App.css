@@ -1,3 +1,42 @@
+* {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+body {
+  margin: 0px;
+}
+
 input {
   width: 100px;
+  margin-top: 6px;
+  padding: 6px;
+  border-radius: 5px;
+  border-width: 1px;
+}
+
+select {
+  width: 100px;
+  margin-top: 6px;
+  padding: 6px;
+  border-radius: 5px;
+}
+
+button {
+  width: 100px;
+  height: 30px;
+  padding: 6px;
+  border-radius: 5px;
+  border-width: 0px;
+  background-color: #b5c99a;
+  border-color: #b5c99a;
+  box-shadow: 2px 2px 3px #718355;
+}
+
+button:hover {
+  background-color: #e9f5db;
+}
+
+p {
+  margin: 0px;
 }

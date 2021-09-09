@@ -8,22 +8,22 @@ export function NavbarNotLogged() {
   };
 
   // TODO to quite default value
-  // const [email, setEmail] = useState("momo@2coders.es");
-  const [email, setEmail] = useState("");
+  const [email, setEmail] = useState("momo@2coders.es");
+  // const [email, setEmail] = useState("");
   const onEmailChange = (event) => setEmail(event.target.value);
 
   // TODO to quite default value
-  // const [password, setPassword] = useState("isitenough");
-  const [password, setPassword] = useState("");
+  const [password, setPassword] = useState("isitenough");
+  // const [password, setPassword] = useState("");
   const onPasswordChange = (event) => setPassword(event.target.value);
 
   return (
-    <nav className="navbar ">
+    <nav className="navbar">
       <div className="navbar-inner navbar-not-logged">
-        <p>U are not logged. Come on in to feed your belly</p>
+        <p>Log in to feed your belly!</p>
         <div className="login">
           <label>
-            <p>email</p>
+            <p>Email</p>
             <input type="text" value={email} onChange={onEmailChange} />
           </label>
 

@@ -9,7 +9,9 @@ export function NavbarLogged() {
     <nav className="navbar ">
       <div className="navbar-inner navbar-logged">
         <Count />
-        <button onClick={onButtonClick}>LOG OUT</button>
+        <button onClick={onButtonClick}>
+          <p>Log out</p>
+        </button>
       </div>
     </nav>
   );
