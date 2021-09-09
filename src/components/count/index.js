@@ -18,11 +18,9 @@ export function Count() {
   if (isLoading) return <div className="count"></div>;
 
   return (
-    data && (
-      <div className={`${status} count`}>
-        <p>{parseInt(data) + " fruits eaten today."}</p>
-        <p>{countStates[status]}</p>
-      </div>
-    )
+    <div className={`${status} count`}>
+      <p>{parseInt(data) + " fruits eaten today."}</p>
+      <p>{countStates[status]}</p>
+    </div>
   );
 }
