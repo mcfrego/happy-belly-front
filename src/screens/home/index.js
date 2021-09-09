@@ -1,11 +1,17 @@
-import useAlive from "../../hooks/use-alive";
-import { Navbar } from "../../components/navbar";
+import "./style.css";
+import { Navbar, Fruitlist } from "../../components/";
+import useAuth from "../../hooks/use-auth";
 
 export function Home() {
+  const { data, isLoading } = useAuth();
+
   return (
-    <div>
-      <Navbar />
-      <p>This is home</p>
+    <div className="container">
+      <Navbar logged={data} />
+      <div className="body">
+        <p>This is home</p>
+        <Fruitlist />
+      </div>
     </div>
   );
 }

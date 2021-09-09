@@ -7,10 +7,12 @@ export function NavbarNotLogged() {
     if (email && password) login({ email, password });
   };
 
-  const [email, setEmail] = useState("");
+  // TODO to quite default value
+  const [email, setEmail] = useState("momo@2coders.es");
   const onEmailChange = (event) => setEmail(event.target.value);
 
-  const [password, setPassword] = useState("");
+  // TODO to quite default value
+  const [password, setPassword] = useState("isitenough");
   const onPasswordChange = (event) => setPassword(event.target.value);
 
   return (
