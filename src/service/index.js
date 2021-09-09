@@ -58,8 +58,8 @@ export async function updateFruit({ id, body, status }) {
 
 export async function deleteFruit({ id }) {
   const token = localStorage.getItem("token");
-
-  const { data } = await api.put(`/fruit/me/${id}`, {
+  console.log(id);
+  const { data } = await api.delete(`/fruit/me/${id}`, {
     headers: { token },
   });
   return data;

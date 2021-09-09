@@ -5,6 +5,8 @@
 }
 
 .body {
+  display: flex;
+  flex-direction: column;
   padding-top: 150px;
   width: 100%;
   max-width: 400px;
