@@ -2,9 +2,16 @@
   width: 75px;
   height: 75px;
   border-radius: 100%;
-  background-color: lightskyblue;
+  background-color: #c99ab5;
+  box-shadow: 0px 0px 6px #718355;
   align-self: flex-end;
   display: flex;
   justify-content: center;
   align-items: center;
+  position: fixed;
+  bottom: 40px;
+}
+
+.fab:hover {
+  background-color: #f4cce2;
 }

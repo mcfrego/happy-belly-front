@@ -8,17 +8,21 @@ const countStates = {
 };
 
 export function Count() {
-  const { data } = useFruitCount();
+  const { data, isLoading } = useFruitCount();
 
   let status;
   if (parseInt(data) < 1) status = "sad";
   else if (parseInt(data) > 4) status = "happy";
   else status = "soso";
 
+  if (isLoading) return <div className="count"></div>;
+
   return (
-    <div className={`${status} count`}>
-      <p>{parseInt(data) + " fruits eaten today."}</p>
-      <p>{countStates[status]}</p>
-    </div>
+    data && (
+      <div className={`${status} count`}>
+        <p>{parseInt(data) + " fruits eaten today."}</p>
+        <p>{countStates[status]}</p>
+      </div>
+    )
   );
 }

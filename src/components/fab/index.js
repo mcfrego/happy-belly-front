@@ -8,7 +8,17 @@ export function Fab(props) {
 
   return (
     <div className="fab" onClick={onClickFab}>
-      {status ? "OPEN" : "CLOSED"}
+      {status ? (
+        <img
+          alt="open"
+          src="https://img.icons8.com/material-outlined/50/000000/fridge-with-open-door.png"
+        />
+      ) : (
+        <img
+          alt="closed"
+          src="https://img.icons8.com/material-outlined/50/000000/fridge.png"
+        />
+      )}
     </div>
   );
 }

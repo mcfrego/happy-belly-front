@@ -16,7 +16,7 @@ export function FruitAdd() {
   const onSizeChange = (event) => {
     setNewSize(event.target.value);
   };
-  const [newQty, setNewQty] = useState(0);
+  const [newQty, setNewQty] = useState(1);
   const onQtyChange = (event) => {
     setNewQty(event.target.value);
   };
@@ -39,7 +39,7 @@ export function FruitAdd() {
         </label>
         <label>
           <p>Qty.</p>
-          <input type="number" onChange={onQtyChange} />
+          <input type="number" value={newQty} onChange={onQtyChange} />
         </label>
       </div>
       <button onClick={onButtonClicked}>Add it!</button>

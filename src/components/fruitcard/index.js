@@ -41,7 +41,7 @@ export function Fruitcard(props) {
 
   return (
     <div
-      className={open && !isEdit ? "card opencard" : "card"}
+      className={open || isEdit ? "card opencard" : "card"}
       onClick={onCardClicked}
     >
       {!isEdit && open && <button onClick={onButtonClicked}>Eat it!</button>}
@@ -59,8 +59,12 @@ export function Fruitcard(props) {
               <option value="big">Big</option>
             </select>
           </label>
-          <p onClick={onUpdateClicked}>Save</p>
-          <p onClick={onDeleteClicked}>Delete</p>
+          <p className="button-text" onClick={onUpdateClicked}>
+            Save
+          </p>
+          <p className="button-text" onClick={onDeleteClicked}>
+            Delete
+          </p>
         </div>
       ) : (
         <div className="innercard">
