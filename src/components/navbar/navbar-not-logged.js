@@ -8,11 +8,13 @@ export function NavbarNotLogged() {
   };
 
   // TODO to quite default value
-  const [email, setEmail] = useState("momo@2coders.es");
+  // const [email, setEmail] = useState("momo@2coders.es");
+  const [email, setEmail] = useState("");
   const onEmailChange = (event) => setEmail(event.target.value);
 
   // TODO to quite default value
-  const [password, setPassword] = useState("isitenough");
+  // const [password, setPassword] = useState("isitenough");
+  const [password, setPassword] = useState("");
   const onPasswordChange = (event) => setPassword(event.target.value);
 
   return (
