@@ -1,21 +1,20 @@
-// import logo from './logo.svg';
-// import './App.css';
-import React from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import { QueryClient, QueryClientProvider } from "react-query";
 
-import { Home, Dashboard } from "./screens";
+import { Home } from "./screens";
+
+const queryClient = new QueryClient();
 
 export default function App() {
   return (
-    <Router>
-      <Switch>
-        <Route path="/dashboard">
-          <Dashboard />
-        </Route>
-        <Route path="/">
-          <Home />
-        </Route>
-      </Switch>
-    </Router>
+    <QueryClientProvider client={queryClient}>
+      <Router>
+        <Switch>
+          <Route path="/">
+            <Home />
+          </Route>
+        </Switch>
+      </Router>
+    </QueryClientProvider>
   );
 }

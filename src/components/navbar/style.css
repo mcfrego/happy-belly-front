@@ -1,0 +1,37 @@
+.navbar {
+  min-height: 100px;
+  width: 100%;
+  background-color: darkslategray;
+  padding: 2%;
+}
+
+.navbar-not-logged {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.login {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: flex-end;
+}
+
+.navbar-logged {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+button {
+  height: 25px;
+  width: 75px;
+  border-radius: 5px;
+  padding: 0;
+}
+
+p {
+  margin: 0;
+}
