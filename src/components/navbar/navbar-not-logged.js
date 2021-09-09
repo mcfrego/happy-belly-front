@@ -16,22 +16,28 @@ export function NavbarNotLogged() {
   const onPasswordChange = (event) => setPassword(event.target.value);
 
   return (
-    <nav className="navbar navbar-not-logged">
-      <p>U are not logged. Come on in to feed your belly</p>
-      <div className="login">
-        <label>
-          <p>email</p>
-          <input type="text" value={email} onChange={onEmailChange} />
-        </label>
+    <nav className="navbar ">
+      <div className="navbar-inner navbar-not-logged">
+        <p>U are not logged. Come on in to feed your belly</p>
+        <div className="login">
+          <label>
+            <p>email</p>
+            <input type="text" value={email} onChange={onEmailChange} />
+          </label>
 
-        <label>
-          <p>Password</p>
-          <input type="password" value={password} onChange={onPasswordChange} />
-        </label>
+          <label>
+            <p>Password</p>
+            <input
+              type="password"
+              value={password}
+              onChange={onPasswordChange}
+            />
+          </label>
 
-        <button onClick={onButtonClick}>
-          <p>Log in</p>
-        </button>
+          <button onClick={onButtonClick}>
+            <p>Log in</p>
+          </button>
+        </div>
       </div>
     </nav>
   );

@@ -6,9 +6,11 @@ export function NavbarLogged() {
   const onButtonClick = () => logout();
 
   return (
-    <nav className="navbar navbar-logged">
-      <Count />
-      <button onClick={onButtonClick}>LOG OUT</button>
+    <nav className="navbar ">
+      <div className="navbar-inner navbar-logged">
+        <Count />
+        <button onClick={onButtonClick}>LOG OUT</button>
+      </div>
     </nav>
   );
 }
