@@ -1,5 +1,5 @@
 import "./style.css";
-import { Navbar, Fruitlist, Fab } from "../../components/";
+import { Navbar, Fruitlist, Fab, FruitAdd } from "../../components/";
 import useAuth from "../../hooks/use-auth";
 import { useState } from "react/cjs/react.development";
 
@@ -11,7 +11,7 @@ export function Home() {
     <div className="container">
       <Navbar logged={data} />
       <div className="body">
-        <p>This is home</p>
+        {fabState ? <FruitAdd /> : <p>This is your fridge!</p>}
         <Fruitlist logged={data} isEdit={fabState} />
         {data && <Fab status={fabState} setStatus={setFabState} />}
       </div>

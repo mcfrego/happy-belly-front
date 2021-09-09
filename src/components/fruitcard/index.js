@@ -48,11 +48,11 @@ export function Fruitcard(props) {
       {isEdit ? (
         <div className="innercard">
           <label>
-            Name
+            <p>Name</p>
             <input value={updateName} onChange={onNameChange} />
           </label>
           <label>
-            Size
+            <p>Size</p>
             <select value={updateSize} onChange={onSizeChange}>
               <option value="small">Small</option>
               <option value="medium">Medium</option>

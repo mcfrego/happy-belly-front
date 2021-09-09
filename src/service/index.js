@@ -29,11 +29,11 @@ export async function getFruitCount() {
   return data;
 }
 
-export async function createFruits({ name, size, count }) {
+export async function createFruits({ name, size, qty }) {
   const token = localStorage.getItem("token");
 
   const body = { fruits: [] };
-  for (let i = 0; i < count; i++) {
+  for (let i = 0; i < qty; i++) {
     body.fruits.push({ name, size });
   }
 

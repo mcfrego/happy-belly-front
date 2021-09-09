@@ -1,0 +1,21 @@
+.add-fruit-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.add-fruit-title {
+  align-self: flex-start;
+}
+
+.add-fruit-inputs {
+  width: 100%;
+  padding: 20px 0 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.add-fruit-button {
+  margin-bottom: 40px;
+}
