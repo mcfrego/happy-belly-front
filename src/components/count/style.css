@@ -1,0 +1,20 @@
+.count {
+  height: 50px;
+  width: 200px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  padding: 2%;
+}
+
+.happy {
+  background-color: lightgreen;
+}
+
+.soso {
+  background-color: lightyellow;
+}
+
+.sad {
+  background-color: lightpink;
+}
