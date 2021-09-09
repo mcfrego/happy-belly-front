@@ -22,10 +22,39 @@ export async function getFruits() {
   return data;
 }
 
-export async function getFruitCount() {}
+export async function getFruitCount() {
+  const token = localStorage.getItem("token");
 
-export async function createFruits() {}
+  const { data } = await api.get("/fruit/me", { headers: { token } });
+  return data;
+}
 
-export async function updateFruit() {}
+export async function createFruits({ name, size, count }) {
+  const token = localStorage.getItem("token");
 
-export async function deleteFruit() {}
+  const body = { fruits: [] };
+  for (let i = 0; i < count; i++) {
+    body.fruits.push({ name, size });
+  }
+
+  const { data } = await api.post("/fruit/me", body, { headers: { token } });
+  return data;
+}
+
+export async function updateFruit({ id, body }) {
+  const token = localStorage.getItem("token");
+
+  const { data } = await api.put(`/fruit/me/${id}`, body, {
+    headers: { token },
+  });
+  return data;
+}
+
+export async function deleteFruit({ id }) {
+  const token = localStorage.getItem("token");
+
+  const { data } = await api.put(`/fruit/me/${id}`, {
+    headers: { token },
+  });
+  return data;
+}
