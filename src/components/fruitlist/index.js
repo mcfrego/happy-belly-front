@@ -1,5 +1,6 @@
 import useFruits from "../../hooks/use-fruits";
 import { Fruitcard } from "..";
+import "./style.css";
 
 export function Fruitlist(props) {
   const { logged, isEdit } = props;

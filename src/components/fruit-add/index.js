@@ -23,11 +23,11 @@ export function FruitAdd() {
 
   return (
     <div className="add-fruit-container">
-      <p className="add-fruit-title">Add on more fruit to your fridge</p>
+      <p className="add-fruit-title">Add more fruit to your fridge</p>
       <div className="add-fruit-inputs">
         <label>
           <p>Name</p>
-          <input placeholder="eg. strawberry" onChange={onNameChange} />
+          <input placeholder="eg. apple" onChange={onNameChange} />
         </label>
         <label>
           <p>Size</p>
